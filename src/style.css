@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Roboto', sans-serif;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  :root {
+    --brand-color: #FF2D08;
+    --accent: #fbff2b;
+    --neutral-white: #ffffff;
+
+    --container-width: 60%;
+    --main-gap: 1em;
+    --main-padding: 1em;
+    --full-width: 100%;
+
+  }
+  
+
+  .text-center {
+    text-align: center;
+  }
+
+  .container {
+    width: var(--container-width);
+    margin: 0 auto;
+  }
+
+  header {
+    background-color: var(--brand-color);
+    color: var(--neutral-white);
+    height: 60px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--main-gap);
+    padding: var(--main-padding)
+  }
+
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-path {
+    font-weight: 900;
+    font-size: clamp(130%, 180%, 200%);
+    transition: all .4s;
+    cursor: pointer;
+  }
+  
+  .nav-path:hover {
+    border-bottom: 4px solid var(--accent);
+  }
+
+
+  .calculated-height {
+    height: calc(100vh - 60px);
+  }
+  .background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative; 
+    font-weight: 900;
+
+    color: var(--neutral-white);
+    
+  }
+
+  .slogan {
+    font-size: 500%;
+  }
+
+  .btn-cta {
+    cursor: pointer;
+    padding: .8em 1.3em;
+    outline: none;
+    font-weight: 900;
+    font-size: clamp(100%, 150%, 350%);
+    border: none;
+    background-color: var(--brand-color);
+    color: var(--neutral-white);
+    transition: all .4s;
+  }
+
+  .btn-cta:hover {
+    background-color: var(--neutral-white);
+    color: var(--brand-color);
+    border-radius: 8px;
+  }
+  .accent-text {
+    color: var(--accent);
+  }
+
+  .grid {
+    padding: 2em;
+
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+    align-items: center;
+    grid-auto-rows: minmax(400px, 1fr);
+    gap: 2em;
+  }
+
+  .menu-card img {
+    width: 70%;
+    margin: 0 auto;
+    transition: transform .5s;
+  }
+  
+  .menu-card img:hover {
+    transform: scale(1.15);
+  }
+
+  .img-desc {
+    margin-top: auto;
+    font-size: clamp(200%, 150%, 150%);
+    text-transform: uppercase;
+    font-weight: 900;
+  }
